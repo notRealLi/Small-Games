@@ -13,5 +13,7 @@
 
 ####Game instructions:
 -"S" and "S" key to control the right paddle
+
 -"O" and "K" key to control the left paddle
+
 -"Space" to start, pause and resume the game
