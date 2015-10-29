@@ -10,6 +10,7 @@
 ####Launching instruction: (for Windows)
 1. Navigate to ".\Pong\application.windows64" or ".\Pong\application.windows32"
 2. Double click "Pong.exe" to launch the game
+
 ####Game instructions:
 -"S" and "S" key to control the right paddle
 -"O" and "K" key to control the left paddle
