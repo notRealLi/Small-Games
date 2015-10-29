@@ -56,7 +56,7 @@ void draw (){
         ball.setMX(ball.getMX()*-1); //// Change direction horizontally
       }
       
-      if (ball.getY() >= height || ball.getY() <= 0) { // To check if the ball's touching the top or the bottom
+      if (ball.getY() + ball.getDia()/2 >= height || ball.getY() - ball.getDia()/2 <= 0) { // To check if the ball's touching the top or the bottom
         ball.setMY(ball.getMY()*-1); //// Change direction vertically
       }
       
