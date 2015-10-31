@@ -6,6 +6,7 @@ Friday, 7 November 2014, 9:21 PM
 -A simple Breakout game
 ####Development environment: 
 -Processing 2.2.1
+
 -Windows 7 (64bit)
 ####Launching instruction: (for Windows)
 1. Navigate to ".\Pong\application.windows64" or ".\Pong\application.windows32"
