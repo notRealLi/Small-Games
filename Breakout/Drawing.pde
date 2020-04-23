@@ -41,7 +41,8 @@ void moveBalls () {
   
   //// Detecting collision between the ball and bricks
   for (int i = 0; i < numBricks; i++) {
-    
+    print(i);
+    print("\n");
     //// To check if the ball is touching one of the remaining(visible) bricks
     if ((ball.getY() > bricks[i].getY() && (ball.getY() - bricks[i].getY()) <= (ball.getDia()/2 + bricks[i].getHei()) ||
         ball.getY() <= bricks[i].getY() && (bricks[i].getY() - ball.getY()) <= ball.getDia()/2)  && 

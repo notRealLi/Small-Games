@@ -1,5 +1,5 @@
 //// All about the bricks
-final int numBricks = 64; // Total number of bricks
+int numBricks; // Total number of bricks
 int brickCountWin; // Count of bricks towards winning
 int brickCountSpeed; // Count of bricks towards next speed change
 Brick[] bricks;
@@ -13,7 +13,8 @@ int numPoints = 0; // Number of points
 boolean Pause = true; // To check if the game is paused
 
 void setup () {
-  size(800,640);
+  fullscreen();
+  //size(800,640);
   frameRate(90);
   background(0);  
   stroke(255);
@@ -33,24 +34,27 @@ void setup () {
   //// Storing info of the bricks 
   brickCountWin = 0; // Count of bricks towards winning
   brickCountSpeed = 0; // Count of bricks towards next speed change 
-  bricks = new Brick[numBricks];
   float brickNextY = 30; // Y coordinate of the next brick
   color brickColor; // Color of the next brick
   int rowMax = 8; // Max number of bricks per row
   int columnMax = 8; // Max number of bricks per column
+  numBricks = rowMax * columnMax;
+  bricks = new Brick[numBricks];
+  float brickWidth = width / columnMax;
   
   for (int row = 0; row < rowMax; row++) {   
     float brickNextX = 0; // X coordinate of the next brick    
-    for (int column = 0; column < columnMax; column++) {      
+    for (int column = 0; column < columnMax; column++) {   
+          
       if (row < 2)
-        bricks[row*8+column] = new Brick(brickNextX,brickNextY,"red"); // Red bricks
+        bricks[row*columnMax+column] = new Brick(brickNextX,brickNextY, brickWidth, "red"); // Red bricks
       else if (row < 4)
-        bricks[row*8+column] = new Brick(brickNextX,brickNextY,"orange"); // Orange bricks
+        bricks[row*columnMax+column] = new Brick(brickNextX,brickNextY, brickWidth, "orange"); // Orange bricks
       else if (row < 6)
-        bricks[row*8+column] = new Brick(brickNextX,brickNextY,"green"); // Green bricks
+        bricks[row*columnMax+column] = new Brick(brickNextX,brickNextY, brickWidth, "green"); // Green bricks
       else 
-        bricks[row*8+column] = new Brick(brickNextX,brickNextY,"yellow"); // Yellow bricks      
-      brickNextX += 100;
+        bricks[row*columnMax+column] = new Brick(brickNextX,brickNextY, brickWidth, "yellow"); // Yellow bricks      
+      brickNextX += brickWidth;
     }   
     brickNextY += 20;
   }

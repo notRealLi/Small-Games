@@ -1,15 +1,15 @@
 class Brick {
   private float posX;
   private float posY;
-  private int bWidth;
+  private float bWidth;
   private int bHeight;
   private String colour;
   
-  public Brick (float x, float y, String c) {
+  public Brick (float x, float y, float w, String c) {
     posX = x;
     posY = y;
     colour = c;
-    bWidth = 100;
+    bWidth = w;
     bHeight = 20;
   }
   
@@ -22,6 +22,6 @@ class Brick {
   public String getCol () {return colour;}
   public void setCol (String c) {colour = c;}
   
-  public int getWid () {return bWidth;}
+  public float getWid () {return bWidth;}
   public int getHei () {return bHeight;}
 }
